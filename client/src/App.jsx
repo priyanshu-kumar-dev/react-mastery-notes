@@ -1,16 +1,27 @@
-import Counter from "./components/Counter";
+import UseState from "./components/UseState";
 import Props from "./components/Props";
 import PasswordToggle from "./components/PasswordToggle";
 import CharacterCounter from "./components/CharacterCounter";
-
+import ConditionalRendering from "./components/ConditionalRendering";
+import List from "./components/List";
+import UseEffect from "./components/UseEffect";
+import Api from "./components/Api";
+import UseRef from "./components/UseRef";
+import UseReducer from "./components/UseReducer";
 
 const App = () => {
   return (
     <>
-      {/* <Counter />
-      <Props /> */}
-      {/* <PasswordToggle/> */}
-      <CharacterCounter/>
+      {/* <UseState />
+      <Props /> 
+      <PasswordToggle/>
+      <CharacterCounter/> 
+      <ConditionalRendering/> */}
+      {/* <List/> */}
+      {/* <UseEffect /> */}
+      {/* <Api/> */}
+      {/* <UseRef/> */}
+      <UseReducer/>
     </>
   );
 };
