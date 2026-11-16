@@ -8,8 +8,16 @@ import UseEffect from "./components/UseEffect";
 import Api from "./components/Api";
 import UseRef from "./components/UseRef";
 import UseReducer from "./components/UseReducer";
+import UseMemo from "./components/UseMemo";
+import UseCallback from "./components/UseCallback";
+import Counter from "./components/Counter;";
+import { useState } from "react";
+import { ThemeContext } from "./components/ThemeContext";
+import Profile from "./components/Profile";
+import Reducer from "./components/Reducer";
 
-const App = () => {
+function App() {
+  const [theme, setTheme] = useState("light");
   return (
     <>
       {/* <UseState />
@@ -21,9 +29,16 @@ const App = () => {
       {/* <UseEffect /> */}
       {/* <Api/> */}
       {/* <UseRef/> */}
-      <UseReducer/>
+      {/* <UseReducer/> */}
+      {/* <UseMemo /> */}
+      {/* <UseCallback /> */}
+      {/* <Counter/> */}
+      {/* <ThemeContext.Provider value={{ theme, setTheme }}>
+        <Profile />
+      </ThemeContext.Provider> */}
+      {/* <Reducer /> */}
     </>
   );
-};
+}
 
 export default App;
