@@ -15,6 +15,9 @@ import { useState } from "react";
 import { ThemeContext } from "./components/ThemeContext";
 import Profile from "./components/Profile";
 import Reducer from "./components/Reducer";
+import Navbar from "./components/Navbar";
+import Parent from "./pages/Parent";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -37,6 +40,11 @@ function App() {
         <Profile />
       </ThemeContext.Provider> */}
       {/* <Reducer /> */}
+      <ErrorBoundary>
+        <Navbar />
+      </ErrorBoundary>
+
+      {/* <Parent/> */}
     </>
   );
 }
