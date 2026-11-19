@@ -1,5 +1,19 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-const ThemeContext = createContext();
+const UserContext = createContext();
 
-export default ThemeContext;
+export function UserProvider({ children }) {
+  const [user, setUser] = useState({
+    name: "Priyanshu",
+    isLoggedIn: false,
+  });
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+    
+  );
+}
+
+export default UserContext;

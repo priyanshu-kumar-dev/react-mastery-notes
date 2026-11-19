@@ -16,11 +16,18 @@ import { ThemeContext } from "./components/ThemeContext";
 import Profile from "./components/Profile";
 import Reducer from "./components/Reducer";
 import Navbar from "./components/Navbar";
+import { UserProvider } from "./context/UserContext";
+import Context from "./pages/Context";
+import { ThemeProvider } from "./context/ThemeContext";
+import Theme from "./pages/Theme"
 import Parent from "./pages/Parent";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ChildA from "./components/ChildA";
+import ChildB from "./components/ChildB";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [name, setName] = useState("")
   return (
     <>
       {/* <UseState />
@@ -40,11 +47,19 @@ function App() {
         <Profile />
       </ThemeContext.Provider> */}
       {/* <Reducer /> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Navbar />
-      </ErrorBoundary>
-
+      </ErrorBoundary> */}
       {/* <Parent/> */}
+      {/* <UserProvider>
+      <Context />
+    </UserProvider> */}
+    {/* <ThemeProvider>
+      <Theme />
+    </ThemeProvider> */}
+    {/* <ChildA setName={setName}/>
+    <ChildB name={name}/> */}
+    <Parent name={name}/>
     </>
   );
 }
